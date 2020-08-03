@@ -18,6 +18,14 @@ This package requires the following:
 	-numpy
 	-matplotlib
 
+Features should be developed on branches. To create and switch to a branch use the command
+
+    git checkout -b <branch_name>
+
+To swith to an existing branch, use:
+
+    git checkout <branch_name>
+
 ### Copyright
 
 Copyright (c) 2020, Bryce Westheimer
