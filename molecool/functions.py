@@ -76,22 +76,28 @@ Functions and definitions from jupyter notebook
 
 def calculate_distance(rA, rB):
     # This function calculates the distance between two points given as numpy arrays.
-    d=(rA-rB)
-    dist=np.linalg.norm(d)
+    d = (rA - rB)
+    
+    dist = np.linalg.norm(d)
+    
     return dist
 
 def open_pdb(f_loc):
     # This function reads in a pdb file and returns the atom names and coordinates.
+    
     with open(f_loc) as f:
         data = f.readlines()
-    c = []
+    
+    coordinates = []
     sym = []
-    for l in data:
-        if 'ATOM' in l[0:6] or 'HETATM' in l[0:6]:
-            sym.append(l[76:79].strip())
-            c2 = [float(x) for x in l[30:55].split()]
-            c.append(c2)
-    coords = np.array(c)
+    for line in data:
+        if 'ATOM' in line[0:6] or 'HETATM' in line[0:6]:
+            sym.append(line[76:79].strip())
+            c2 = [float(x) for x in line[30:55].split()]
+            coordinates.append(c2)
+    
+    coords = np.array(coordinates)
+    
     return sym, coords
 
 atomic_weights = {
