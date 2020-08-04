@@ -2,6 +2,18 @@
 functions.py
 A Python package for analyzing and visualizing molecular structures. for MSF bootcamp.
 
+Imports for functions copied over from Jupyter notebook
+"""
+
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+
+from mpl_toolkits.mplot3d import Axes3D
+
+%matplotlib notebook
+
+"""
 Handles the primary functions
 """
 
@@ -63,14 +75,6 @@ if __name__ == "__main__":
 Functions and definitions from jupyter notebook
 
 """
-
-import os
-import numpy as np
-import matplotlib.pyplot as plt
-
-from mpl_toolkits.mplot3d import Axes3D
-
-%matplotlib notebook
 
 def calculate_distance(rA, rB):
     # This function calculates the distance between two points given as numpy arrays.
