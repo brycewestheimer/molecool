@@ -151,7 +151,7 @@ def write_xyz(file_location, symbols, coordinates):
         f.write('XYZ file\n')
         
         for i in range(num_atoms):
-            f.write('{}\\t{}\\t{}\\t{}\n'.format(symbols[i], 
+            f.write('{}\t{}\t{}\t{}\n'.format(symbols[i], 
                                               coordinates[i,0], coordinates[i,1], coordinates[i,2]))
 
 def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
@@ -169,7 +169,7 @@ def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi
     
     size = np.array(plt.rcParams['lines.markersize'] ** 2)*200/(len(coordinates))
 
-    ax.scatter(coordinates[:,0], coordinates[:,1], coordinates[:,2], marker=\"o\",
+    ax.scatter(coordinates[:,0], coordinates[:,1], coordinates[:,2], marker="o",
                edgecolors='k', facecolors=colors, alpha=1, s=size)
     
     # Draw bonds
