@@ -119,11 +119,11 @@ def write_xyz(file_location, symbols, coordinates):
     num_atoms = len(symbols)
     
     with open(file_location, 'w+') as f:
-        f.write('{}\\n'.format(num_atoms))
-        f.write('XYZ file\\n')
+        f.write('{}\n'.format(num_atoms))
+        f.write('XYZ file\n')
         
         for i in range(num_atoms):
-            f.write('{}\\t{}\\t{}\\t{}\\n'.format(symbols[i], 
+            f.write('{}\\t{}\\t{}\\t{}\n'.format(symbols[i], 
                                               coordinates[i,0], coordinates[i,1], coordinates[i,2]))
 
 def draw_molecule(coordinates, symbols, draw_bonds=None, save_location=None, dpi=300):
