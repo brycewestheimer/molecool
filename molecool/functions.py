@@ -11,8 +11,6 @@ import matplotlib.pyplot as plt
 
 from mpl_toolkits.mplot3d import Axes3D
 
-%matplotlib notebook
-
 """
 Handles the primary functions
 """
@@ -39,7 +37,7 @@ def zen(with_attribution=True):
     Namespaces are one honking great idea -- let's do more of those!"""
 
     if with_attribution:
-        quote += "\n\t- Adapted from Henry Tim Peters""
+        quote += "\n\t- Adapted from Henry Tim Peters"
     return quote
 
 
